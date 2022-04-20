@@ -14,7 +14,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 2rem;
   }
   
   /* adjust typography defaults */
@@ -23,12 +23,17 @@ html {
     font-family: helvetica, arial, sans-serif;
     background-color: slategrey;
     color: white;
+    background-image: linear-gradient( 102.4deg,  rgba(253,189,85,1) 7.8%, rgba(249,131,255,1) 100.3% );
   }
   
   h1 {
     font-family: verdana, arial, sans-serif; 
+    font-size: 2rem;
   }
   
+p {
+  font-style: italic;
+}
   button {
     font-size: 1rem;
     padding: 10px;
@@ -38,6 +43,7 @@ html {
   #gameButtonArea{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
   
   .hidden {
@@ -52,12 +58,12 @@ html {
   
   
   #button1 {
-      background: lightgreen;
+      background: #ff66c0;
       border-radius: 100%;
   }
   
   #button1:active, #button1.lit {
-      background: green;
+      background: #e3528c;
   }
   
   
@@ -97,23 +103,28 @@ html {
   }
   
   #button6 {
-      background: #ff66c0;
+      background: lightgreen;
       border-radius: 100%;
   }
   
   #button6:active, #button6.lit {
-      background: #e3528c;
+      background: green;
   }
   .gameAttributes {
     display: grid;
-    grid-template: repeat(1, 50px) / repeat(2, 100px);
+    grid-template: repeat(1, 50px) / 100px 50fr 50fr;
     column-gap: 100px;
+    margin-bottom: 100px;
   }
   
   
   #timer{
     padding: 10px;
+    font-size: 2rem;
+    position: relative;
+    bottom: 10px;
   }
+
   /* images and videos max out at full width */
   img,
   video {
