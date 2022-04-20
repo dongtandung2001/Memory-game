@@ -1,0 +1,122 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  /* adjust typography defaults */
+  body {
+    margin: 2em;
+    font-family: helvetica, arial, sans-serif;
+    background-color: slategrey;
+    color: white;
+  }
+  
+  h1 {
+    font-family: verdana, arial, sans-serif; 
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #gameButtonArea{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .hidden {
+    display:none;
+  }
+  
+  #gameButtonArea > button {
+    width:200px;
+    height:200px;
+    margin:2px;
+  }
+  
+  
+  #button1 {
+      background: lightgreen;
+      border-radius: 100%;
+  }
+  
+  #button1:active, #button1.lit {
+      background: green;
+  }
+  
+  
+  #button2 {
+      background: lightyellow;
+      border-radius: 100%;
+  }
+  
+  #button2:active, #button2.lit {
+      background: yellow;
+  }
+  #button3 {
+      background: lightblue;
+      border-radius: 100%;
+  }
+  
+  #button3:active, #button3.lit {
+      background: blue;
+  }
+  
+  #button4 {
+      background: #ba9997;
+      border-radius: 100%;
+  }
+  
+  #button4:active, #button4.lit {
+      background: #a46050;
+  }
+  
+  #button5 {
+      background: #ff9f00;
+      border-radius: 100%;
+  }
+  
+  #button5:active, #button5.lit {
+      background: #ff6000;
+  }
+  
+  #button6 {
+      background: #ff66c0;
+      border-radius: 100%;
+  }
+  
+  #button6:active, #button6.lit {
+      background: #e3528c;
+  }
+  .gameAttributes {
+    display: grid;
+    grid-template: repeat(1, 50px) / repeat(2, 100px);
+    column-gap: 100px;
+  }
+  
+  
+  #timer{
+    padding: 10px;
+  }
+  /* images and videos max out at full width */
+  img,
+  video {
+    height: auto;
+    max-width: 100%;
+  }
