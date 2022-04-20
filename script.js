@@ -33,6 +33,10 @@ function startGame() {
   progress = 0;
   // 3 chance when start theg game
   chance = 3;
+  // clear previous intervals if exists
+  clearInterval(myInterval);
+  // Display chance at the begining of the play: 
+  document.getElementById("chance").innerHTML = "Chance: " + 3;
   console.log(pattern);
   gamePlaying = true;
   document.getElementById("startBtn").classList.add("hidden");
@@ -114,31 +118,41 @@ function winGame() {
 
 function guess(btn) {
   console.log("user guessed: " + btn);
-  // clear interval otherwise the clock will speed up
   clearInterval(myInterval);
+  // clear interval otherwise the clock will speed up
   if (!gamePlaying) {
     return;
   }
   // add game logic here
+  // guess correct
   if (btn == pattern[guessCounter]){
+    // if guesses are same as sequence clue
     if(guessCounter == progress) {
       clearInterval(myInterval);
+      // if guesses = pattern = win
       if (guessCounter == pattern.length - 1) {
         winGame();
       } else {
+        // clear interval so that the clock won't speed up
         progress++;
         playClueSequence();
       }
     }
      else {
+       // clear interval so that the clock won't speed up
        guessCounter++;
      }
-  } else {
+  } else { // Wrong guess
     // check if the user still have chance to guess
-    if(chance >= 0) {
+    // 3 chance = 2 wrongs guess allowed
+    if(chance >1) {
       chance--;
+      // Edit chance on UI
+      document.getElementById("chance").innerHTML = "Chance: " + chance;
     } else {
-    loseGame();
+      chance--;
+      document.getElementById("chance").innerHTML = "Chance: " + chance;
+      loseGame();
     }
   }
   // start the clock for next guess
@@ -193,7 +207,11 @@ o.start(0);
 function myTimer() {
   document.getElementById("timer").innerHTML = "Time left: " + timer;
   timer--;
+  document.getElementById("timer").innerHTML = "Time left: " + timer;
   if (timer == 0) {
     loseGame();
+  } 
+  if (timer < 0){
+    clearInterval(myInterval);
   }
 }
