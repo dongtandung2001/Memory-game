@@ -37,23 +37,26 @@ The following **additional** features are implemented:
 - [ ] List anything else that you can get done to improve the app!
 
 ## Video Walkthrough (GIF)
+Win game after repeat sequence of 8 notes:
+
+![ezgif-3-d15d558a4b](https://user-images.githubusercontent.com/40316606/164524921-095945e2-1bd9-47aa-8aed-e1c82256e557.gif)
+
 Lose game with 3 chances
+
 ![Screen-Recording-2022-04-20-at-4-2](https://user-images.githubusercontent.com/40316606/164343753-fe0c911d-6a10-48bb-b730-13e7ecb0871a.gif)
 Time limit of 20 seconds:
+
 ![Screen-Recording-2022-04-20-at-4-3](https://user-images.githubusercontent.com/40316606/164344042-38513c97-97cc-45c8-9048-9b50f51dd021.gif)
 
-If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](gif1-link-here)
-![](gif2-link-here)
-![](gif3-link-here)
-![](gif4-link-here)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-[YOUR ANSWER HERE]
+I mostly searched for some html css syntax on https://www.w3schools.com 
+I am also self-studying HTML CSS and JS on https://codewithmosh.com
+I looked for errors on https://stackoverflow.com
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[YOUR ANSWER HERE]
+
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 [YOUR ANSWER HERE]
