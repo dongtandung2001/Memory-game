@@ -51,24 +51,43 @@ Time limit of 20 seconds:
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-I mostly searched for some html css syntax on https://www.w3schools.com 
-I am also self-studying HTML CSS and JS on https://codewithmosh.com
-I looked for errors on https://stackoverflow.com
+    
+      I mostly searched for some html css syntax on https://www.w3schools.com 
+
+      I am also self-studying HTML CSS and JS on https://codewithmosh.com
+
+      I looked for errors on https://stackoverflow.com
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 
+      I think one of the challenges was implementing the ticking clock. I followed the instructions on w3school about the syntax, I tried several times, however, the clock kept speeding up after each sequence. It ticked faster than it was supposed to. For eg: the first clue was normal, when it came to the second sequence clue, the clock started to count down faster. It kept increasing the speed of counting for the next sequences. I set a new interval on startGame() and at the end of guess(btn);
+
+      Then I read about this on stackoverflow, one of the guys pointed out that since the first interval has not been cleared yet, you already start the new interval, that’s why the interval is twice the speed. 
+
+      At first, I tried to temporarily solve the problem by clearing the interval at the beginning of the guess function, and starting the new interval at the end. It solved the speed up problem but whenever the button was clicked, the clock stopped for a moment. This looked like a bug to me and I did not like it.
+
+      Eventually, I figured out that I should have not started the new interval at the end of the guess function, but rather, after the user correctly finishes guessing a clue sequence. Instead of clearing intervals every time the button is clicked, I only have to clear after the user correctly finishes guessing a clue sequence as well.
+
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
 
-4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+    Most of the content about web development is pretty straight forward up to now. However, I am always curious about how to secure the web. I know how to set up the web and make it into production, however, securing the web is a thing to me. I always wonder how people secure their webs. It is a really nice topic for me to learn. Since when you surf the internet, safety is always the priorty.
 
+    One more thing is how the front-end developer and back-end developer can connect their code together. I had 3 projects that were APIs but I don't know how web developer can use that API as to expose data to the UI.
+
+4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words)
+
+    If I had more hours to work on this project, I would have the secret patterns be the patterns of any songs where each button is a note in the piano’s keyboard instead of being generated simply by Math.random. And each button is a key in the piano It makes the game more interesting to play. 
+    
+    And I would add some sound and lighting effects when the time is about to end and change the Chance countdown to a heart instead of counting numbers.
+
+    I would let the user choose the difficulty to play. As the difficulty increases, the time between clues decreases, the pattern’s length increases. I would do this by adding the _select_ tag in a _form_ to get the user input about the difficulty. Then assign time to clueHoldTime, cluePauseTime, nextClueWaitTime, and pattern according to the choice of user.
 
 
 ## Interview Recording URL Link
+[My 5-minute Interview Recording]
 
-[My 5-minute Interview Recording](your-link-here)
+(your-link-here)
 
 
 ## License
