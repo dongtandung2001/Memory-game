@@ -37,6 +37,10 @@ The following **additional** features are implemented:
 - [ ] List anything else that you can get done to improve the app!
 
 ## Video Walkthrough (GIF)
+Lose game with 3 chances
+![Screen-Recording-2022-04-20-at-4-2](https://user-images.githubusercontent.com/40316606/164343753-fe0c911d-6a10-48bb-b730-13e7ecb0871a.gif)
+Time limit of 20 seconds:
+![Screen-Recording-2022-04-20-at-4-3](https://user-images.githubusercontent.com/40316606/164344042-38513c97-97cc-45c8-9048-9b50f51dd021.gif)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 ![](gif1-link-here)
