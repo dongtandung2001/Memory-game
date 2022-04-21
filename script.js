@@ -118,8 +118,6 @@ function winGame() {
 
 function guess(btn) {
   console.log("user guessed: " + btn);
-  clearInterval(myInterval);
-  // clear interval otherwise the clock will speed up
   if (!gamePlaying) {
     return;
   }
@@ -136,10 +134,11 @@ function guess(btn) {
         // clear interval so that the clock won't speed up
         progress++;
         playClueSequence();
+        // start the clock for next guess
+        myInterval = setInterval(myTimer, 1000);
       }
     }
      else {
-       // clear interval so that the clock won't speed up
        guessCounter++;
      }
   } else { // Wrong guess
@@ -155,8 +154,6 @@ function guess(btn) {
       loseGame();
     }
   }
-  // start the clock for next guess
-  myInterval = setInterval(myTimer, 1000);
 }
 
 // Sound Synthesis Functions
@@ -207,11 +204,7 @@ o.start(0);
 function myTimer() {
   document.getElementById("timer").innerHTML = "Time left: " + timer;
   timer--;
-  document.getElementById("timer").innerHTML = "Time left: " + timer;
-  if (timer == 0) {
+  if (timer <0) {
     loseGame();
   } 
-  if (timer < 0){
-    clearInterval(myInterval);
-  }
 }
