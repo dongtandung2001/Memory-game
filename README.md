@@ -86,8 +86,7 @@ Time limit of 20 seconds:
 
 ## Interview Recording URL Link
 [My 5-minute Interview Recording]
-
-(your-link-here)
+https://www.loom.com/share/8c74ff807161429789c3899f4a8eb4b6
 
 
 ## License
